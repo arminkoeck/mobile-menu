@@ -1,0 +1,136 @@
+
+
+:root {
+    --dropdown-menu-horizontal-padding: 20px;
+    --dropdown-vertical-padding: 20px;
+    --menu-vertical-padding: 20px;
+    
+    --menu-color: darkcyan;
+    --menu-hover-color: purple;
+    --dropdown-color: lightblue;
+    --dropdown-hover-color: pink;
+    --dropdown-border-color: white;
+
+    --menu-font-color: black;
+    --menu-hover-font-color: white;
+    --dropdown-font-color: black;
+    --dropdown-hover-font-color: white;
+}
+
+body {
+    margin: 0;
+}
+
+.menu-container a {
+    text-decoration: none;
+}
+
+.menu-container ul, li {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container > ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.menu-container .dropdown ul {
+    position: absolute;
+    margin-left: calc(0px - var(--dropdown-menu-horizontal-padding));
+    margin-top: var(--menu-vertical-padding);
+    background-color: var(--dropdown-color);
+    box-shadow: 2px 2px 8px -3px rgb(0, 0, 0, 0.4);
+}
+
+.dropdown a {
+    color: var(--dropdown-font-color);
+    padding: var(--dropdown-vertical-padding) var(--dropdown-menu-horizontal-padding);
+    width: calc(100vw - (var(--dropdown-menu-horizontal-padding)*2));
+    display: inline-block;
+    word-wrap: break-word;
+    border-bottom: 1px solid var(--dropdown-border-color);
+    text-align: center;
+}
+
+
+.dropdown li:hover a {
+    color: var(--dropdown-hover-font-color);
+}
+
+.dropdown li:hover {
+    background-color: var(--dropdown-hover-color);
+}
+
+
+.hidden > * {
+    display: none;
+}
+
+
+.dropdown {
+    padding: var(--menu-vertical-padding) var(--dropdown-menu-horizontal-padding);
+    color: var(--menu-font-color);
+    background-color: var(--menu-color);
+    text-align: center;
+}
+
+.dropdown:hover, .dropdown:not(.hidden), .dropdown:hover > a,  .dropdown:not(.hidden) > a {
+    color: var(--menu-hover-font-color);
+}
+
+.dropdown:hover, .dropdown:not(.hidden) {
+    background-color: var(--menu-hover-color);
+}
+
+.dropdown > a{
+ padding: 0;
+ margin: 0;
+}
+
+
+
+/* :root {
+    --menu-vertical-padding: 20px;
+}
+
+.menu-container a {
+    text-decoration: none;
+}
+
+.menu-container ul, li {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0;
+    margin: 20px;
+    background-color: red;
+}
+
+
+
+.menu-container .dropdown ul {
+    position: absolute;
+}
+
+.dropdown li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.hidden > * {
+    display: none;
+} */
